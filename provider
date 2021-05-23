@@ -1,0 +1,78 @@
+I, [2021-05-23T17:24:57.088034 #11]  INFO -- : Registered expected interaction GET /products
+D, [2021-05-23T17:24:57.089589 #11] DEBUG -- : {
+  "description": "a GET request to /products",
+  "request": {
+    "method": "GET",
+    "path": "/products",
+    "headers": {
+      "Content-Type": "application/vnd.api+json",
+      "Accept": "application/vnd.api+json"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "data": {
+        "json_class": "Pact::ArrayLike",
+        "contents": {
+          "type": "products",
+          "id": {
+            "json_class": "Pact::SomethingLike",
+            "contents": 1
+          },
+          "attributes": {
+            "name": {
+              "json_class": "Pact::SomethingLike",
+              "contents": "Awesome product"
+            }
+          }
+        },
+        "min": 1
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2021-05-23T17:24:57.104906 #11]  INFO -- : Received request GET /products
+D, [2021-05-23T17:24:57.105410 #11] DEBUG -- : {
+  "path": "/products",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Content-Type": "application/vnd.api+json",
+    "Host": "localhost:7200",
+    "Accept": "application/vnd.api+json",
+    "User-Agent": "GuzzleHttp/7",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-05-23T17:24:57.106706 #11]  INFO -- : Found matching response for GET /products
+D, [2021-05-23T17:24:57.107272 #11] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "data": {
+      "json_class": "Pact::ArrayLike",
+      "contents": {
+        "type": "products",
+        "id": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 1
+        },
+        "attributes": {
+          "name": {
+            "json_class": "Pact::SomethingLike",
+            "contents": "Awesome product"
+          }
+        }
+      },
+      "min": 1
+    }
+  }
+}
+I, [2021-05-23T17:24:57.129965 #11]  INFO -- : Verifying - interactions matched
+I, [2021-05-23T17:24:57.136093 #11]  INFO -- : Writing pact for provider to /app/pacts/consumer-provider.json
+I, [2021-05-23T17:24:57.144032 #11]  INFO -- : Cleared interactions
