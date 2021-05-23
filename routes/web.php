@@ -19,22 +19,3 @@ Route::get(
         return view('welcome');
     }
 );
-
-Route::get(
-    '/products',
-    function () {
-        return new \Illuminate\Http\JsonResponse(
-            [
-                'data' => [
-                    [
-                        'type'       => 'products',
-                        'id'         => 1,
-                        'attributes' => [
-                            'name' => 'Product',
-                        ],
-                    ],
-                ],
-            ]
-        );
-    }
-);
