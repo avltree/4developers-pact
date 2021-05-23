@@ -2,9 +2,10 @@
 
 namespace App\Infrastructure;
 
+use App\Port\Products;
 use GuzzleHttp\Client;
 
-class GuzzleProducts
+class GuzzleProducts implements Products
 {
     private Client $client;
 
