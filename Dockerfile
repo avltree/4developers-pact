@@ -9,5 +9,5 @@ RUN apt-get update && apt-get install -y libzip-dev rubygems procps && \
     docker-php-ext-enable xdebug && \
     gem install pact-provider-verifier
 
-#USER developer
+USER developer
 WORKDIR /app
